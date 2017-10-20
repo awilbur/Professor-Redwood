@@ -56,16 +56,16 @@ const data = {
 	PRIVILEGED_ROLES: ['admin', 'mod'],
 };
 
-const webhook = secrets.webhook.log.token ? new Discord.WebhookClient(secrets.webhook.log.id, secrets.webhook.log.token) : null;
-data.log = (msg) => {
-	if (webhook) {
-		webhook.send(msg)
-			.then()
-			.catch(console.error); // eslint-disable-line
-	} else {
-		console.log(msg); // eslint-disable-line
-	}
-};
+// const webhook = secrets.webhook.log.token ? new Discord.WebhookClient(secrets.webhook.log.id, secrets.webhook.log.token) : null;
+// data.log = (msg) => {
+// 	if (webhook) {
+// 		webhook.send(msg)
+// 			.then()
+// 			.catch(console.error); // eslint-disable-line
+// 	} else {
+// 		console.log(msg); // eslint-disable-line
+// 	}
+// };
 
 //make this more elegant when we have more than one
 data.standardizePokemonName = (name) => {
